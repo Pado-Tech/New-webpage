@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+header{
+    background-color: rgb(14, 14, 104);
+}
+header nav{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .logo{
+    color: rgb(1, 216, 1);
+    font-weight: bold;
+    font-size: 2rem;
+}
+header nav ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+header nav ul li{
+    list-style: none;
+    position: relative;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #ffff;
+}
+header nav .profile{
+    width: 50px;
+    height: 50px;
+    padding-top: 30px;
+}
+header nav .profile img{
+    width: 100%;
+    border-radius: 50%;
+}
+header nav ul li ul{
+    background-color: rgb(14, 14, 104);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 200%;
+    top: 100%;
+}
+header nav ul li.first:hover > ul{
+    display: flex;
+}
+header nav ul li ul li{
+    position: relative;
+}
+header nav ul li ul li a{
+    width: 100%;
+    padding: 10px 20px;
+    display: inline-block;
+}
+header nav ul li ul li a:hover{
+    background-color: rgb(9, 204, 9);
+}
+header nav ul li ul li ul{
+background-color: rgb(14, 14, 104);
+display: none;
+position: absolute;
+left: 100%;
+top: 0;
+width: 100%;
+}
+header nav ul li.first ul li.second:hover > ul{
+    display: block;
+}
+.grid-container{
+    width: 100%;
+    margin: 0px auto;
+    padding: 40px;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: 2fr 2fr 15%;
+    grid-template-rows: 20% repeat(5, 1fr);
+    grid-template-areas:
+    "post post-content suggestions"
+    "view-post post-content suggestions"
+    "view-post post-content suggestions"
+    "view-post text-post suggestions"
+    "view-post text-post suggestions";
+    grid-gap: 1%
+}
+.grid-container .grid-items{
+    background-color: #ffff;
+    padding: 1rem;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+.grid-container .grid-items.post{
+    grid-area: post;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.grid-container .grid-items.post button{
+    position: absolute;
+    right: 10px;
+    background-color: rgb(14, 14, 104);
+}
+.sub{
+    position: relative;
+}
+.grid-container .grid-items.post input{
+    border: none;
+}
+.grid-container .grid-items.view-post{
+    grid-area: view-post;
+    display: flex;
+}
+.grid-container .grid-items.view-post p{
+    justify-content:right;
+    display: flex;
+    padding-bottom: 20px;
+}
+.grid-container .grid-items.view-post img{
+    width: 100%;
+}
+.grid-container .grid-items.view-post .anime{
+    width: 50px;
+    height: 50px;
+}
+.grid-container .grid-items.view-post .anime img{
+    border-radius: 50%;
+    width: 100%;
+}
+.grid-container .grid-items.view-post .japan{
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+}
+.grid-container .grid-items.post-content{
+    grid-area: post-content;
+    font-size: medium;
+}
+.profile{
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   margin-bottom: 30px;
+}
+.profile-details{
+    display: flex;
+    gap: 15px;
+    padding-top: 10px;
+}
+.comment{
+    color: rgb(14, 14, 104);
+}
+.grid-container .grid-items.post-content img{
+    width: 100%;
+}
+.grid-container .grid-items.post-content .anim{
+    width: 50px;
+    height: 50px;
+}
+.grid-container .grid-items.post-content .anim img{
+    border-radius: 50%;
+    width: 100%;
+}
+.hz img{
+    width: 100%;
+    display: inline-block;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.grid-container .grid-items.text-post{
+    grid-area: text-post;
+}
+.grid-container .grid-items.text-post p{
+    justify-content:right;
+    display: flex;
+    padding-bottom: 20px;
+}
+.grid-container .grid-items.text-post img{
+    width: 100%;
+}
+.grid-container .grid-items.text-post .text{
+    width: 50px;
+    height: 50px;
+}
+.grid-container .grid-items.text-post .text img{
+    width: 100%;
+    border-radius: 50%;
+}.grid-container .grid-items.suggestions{
+    grid-area: suggestions;
+}
+.grid-container .grid-items.suggestions .anim{
+    width: 50px;
+    height: 50px;
+}
+.grid-container .grid-items.suggestions .anim img{
+    border-radius: 50%;
+    width: 100%;
+}
+.grid-container .grid-items.suggestions .second{
+    width: 50px;
+    height: 50px;
+}
+.grid-container .grid-items.suggestions .second img{
+    border-radius: 50%;
+    width: 100%;
+}
+.grid-container .grid-items.suggestions button{
+    background-color: rgb(14, 14, 104);
+}
